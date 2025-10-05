@@ -1,59 +1,74 @@
 <html>
-    <head>
-       <link rel="stylesheet" href="index.css">
-       <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <img src="./images/header.png" alt="picture of a hamburger on a wooden table">
-            <p class="header-title">Jimmy's Dinner</p>
-            <p class="header-subtitle">The best burgers and pizzas in town.</p>
-        </header>
-        <main>
-            <div id="item-container" class="item-container">
-            </div>
-            <div id="order-container" class="order-container">
-                <p class="title">Your Order</p>
-                <div id="order-list" class="order-list">
-                </div>
-                <div id="total-price" class="total-price">
-                </div>
-                <button class="btn" id="order-btn">Complete Order</button>
-            </div>
-        </main>
-        
-        <div id="overlay"></div>
-        <div class="modal" id="modal">
-            <form class="modal-form" id="modal-form">
-                <h1>Enter card details</h1>
-                <input type="text" 
-                        id="fullname" 
-                        name="fullname" 
-                        placeholder="Enter your name" 
-                        required 
-                        title="Please enter your name, its required.">
-                <input type="text" 
-                        id="cardNumber" 
-                        name="cardNumber" 
-                        placeholder="Enter your card number" 
-                        required 
-                        pattern="[0-9]{16}}" 
-                        maxlength="16" 
-                        title="Card numbers must exists out of 16 numbers and are required">
-                <input type="text" 
-                        id="cvv" 
-                        name="cvv" 
-                        placeholder="Enter CVV" 
-                        required 
-                        pattern="[0-9]{3}" 
-                        maxlength="3" 
-                        title="Must be a 3 digit number and is required">
-                <button class="btn" id="pay-btn" type="submit">Pay</button>
-            </form>
-        </div>
-        
-	<script src="index.js" type="module"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" referrerpolicy="no-referrer"></script>
-    </body>
-</html>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Smythe&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img
+        src="./images/header.png"
+        alt="picture of a hamburger on a wooden table"
+      />
+      <p class="header-title">Jimmy's Dinner</p>
+      <p class="header-subtitle">The best burgers and pizzas in town.</p>
+    </header>
+    <main>
+      <div id="item-container" class="item-container"></div>
+      <div id="order-container" class="order-container">
+        <p class="title">Your Order</p>
+        <div id="order-list" class="order-list"></div>
+        <div id="total-price" class="total-price"></div>
+        <button class="btn" id="order-btn">Complete Order</button>
+      </div>
+    </main>
 
+    <div id="overlay"></div>
+    <div class="modal" id="modal">
+      <form class="modal-form" id="modal-form">
+        <h1>Enter card details</h1>
+        <input
+          type="text"
+          id="fullname"
+          name="fullname"
+          placeholder="Enter your name"
+          required
+          title="Please enter your name, its required."
+        />
+        <input
+          type="text"
+          id="cardNumber"
+          name="cardNumber"
+          placeholder="Enter your card number"
+          required
+          pattern="[0-9]{16}}"
+          maxlength="16"
+          title="Card numbers must exists out of 16 numbers and are required"
+        />
+        <input
+          type="text"
+          id="cvv"
+          name="cvv"
+          placeholder="Enter CVV"
+          required
+          pattern="[0-9]{3}"
+          maxlength="3"
+          title="Must be a 3 digit number and is required"
+        />
+        <button class="btn" id="pay-btn" type="submit">Pay</button>
+      </form>
+    </div>
+
+    <script src="index.js" type="module"></script>
+    <script type="module">
+      import uuid from "https://cdn.jsdelivr.net/npm/uuid@13.0.0/+esm";
+    </script>
+    //
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>
