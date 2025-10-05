@@ -43,7 +43,8 @@
           name="cardNumber"
           placeholder="Enter your card number"
           required
-          pattern="[0-9]{16}}"
+          pattern="[0-9]{16}"
+          minlength="16"
           maxlength="16"
           title="Card numbers must exists out of 16 numbers and are required"
         />
@@ -65,10 +66,5 @@
     <script type="module">
       import uuid from "https://cdn.jsdelivr.net/npm/uuid@13.0.0/+esm";
     </script>
-    //
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
-      referrerpolicy="no-referrer"
-    ></script>
   </body>
 </html>
