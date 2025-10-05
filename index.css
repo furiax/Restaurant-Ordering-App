@@ -184,3 +184,11 @@ header {
     background: rgba(0, 0, 0, 0.5); /* semi-transparent black */
     z-index: 10;
 }
+
+.order-complete{
+    color: #065F46;
+    background-color: #ECFDF5;
+    font-size: 32px;
+    padding: 50px 60px;
+    margin-bottom: 40px;
+}

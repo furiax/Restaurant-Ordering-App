@@ -24,12 +24,30 @@
         
         <div id="overlay"></div>
         <div class="modal" id="modal">
-            
-            <form class="modal-form">
+            <form class="modal-form" id="modal-form">
                 <h1>Enter card details</h1>
-                <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required title="Enter your name">
-                <input type="text" id="cardNumber" name="cardNumber" placeholder="Enter your card number" required pattern="[0-9]{16}}" maxlength="16" title="Card numbers exists out of 16 numbers">
-                <input type="text" id="cvv" name="cvv" placeholder="Enter CVV" required pattern="[0-9]{3}" maxlength="3" title="must be a 3 digit number">
+                <input type="text" 
+                        id="fullname" 
+                        name="fullname" 
+                        placeholder="Enter your name" 
+                        required 
+                        title="Please enter your name, its required.">
+                <input type="text" 
+                        id="cardNumber" 
+                        name="cardNumber" 
+                        placeholder="Enter your card number" 
+                        required 
+                        pattern="[0-9]{16}}" 
+                        maxlength="16" 
+                        title="Card numbers must exists out of 16 numbers and are required">
+                <input type="text" 
+                        id="cvv" 
+                        name="cvv" 
+                        placeholder="Enter CVV" 
+                        required 
+                        pattern="[0-9]{3}" 
+                        maxlength="3" 
+                        title="Must be a 3 digit number and is required">
                 <button class="btn" id="pay-btn" type="submit">Pay</button>
             </form>
         </div>

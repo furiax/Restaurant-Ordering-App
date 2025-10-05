@@ -7,6 +7,7 @@ const orderBtn = document.getElementById('order-btn')
 const orderList = document.getElementById('order-list')
 const totalPrice = document.getElementById('total-price')
 const modal = document.getElementById('modal')
+const modalForm = document.getElementById('modal-form')
 const overlay = document.getElementById('overlay')
 let orders = []
 
@@ -86,4 +87,16 @@ orderBtn.addEventListener('click', ()=>{
 overlay.addEventListener('click', ()=>{
     overlay.style.display = 'none'
     modal.style.display = 'none'
+})
+
+modalForm.addEventListener('submit', (e)=>{
+    e.preventDefault()
+    overlay.style.display = 'none'
+    modal.style.display = 'none'
+    const name = modalForm.querySelector('#fullname').value;
+    orderContainer.innerHTML = `
+        <div class="order-complete">
+            <p>Thanks, ${name}! Your order is on its way!</p>
+        </div>
+    `
 })
